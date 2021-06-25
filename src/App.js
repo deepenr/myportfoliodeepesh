@@ -8,6 +8,7 @@ import MyTitleMessage from "./components/title-message/title-messagecomponent";
 import ScrollDown from "./components/scroll-down/scroll-downcomponent";
 import MyNavbar from "./components/navbar/my-navbar";
 import About from "./pages/about/aboutcomponent";
+import Skills from "./pages/skills/skill.component";
 
 const App = () => {
   return (
@@ -30,6 +31,14 @@ const App = () => {
             </Fade>
           </Container>
         </Parallax>
+      </div>
+
+      <div className="App" style={{ position: "relative" }}>
+        <Container className="container-box rounded">
+          <Fade duration={500}>
+            <Skills />
+          </Fade>
+        </Container>
       </div>
     </div>
   );

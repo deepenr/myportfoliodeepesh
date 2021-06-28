@@ -12,16 +12,21 @@ import About from "./pages/about/aboutcomponent";
 import Skills from "./pages/skills/skill.component";
 import Experience from "./pages/experience/experience.component";
 import ProjectTimeline from "./components/project-timline/project-timline.component";
+import ContactForm from "./pages/contact-form/contact-form-component";
+import Footer from "./components/footer/footer.component";
+import Particles from "react-particles-js";
+import particlesOptions from "./particles";
+
 const App = () => {
   return (
-    <div>
+    <div className="App" style={{ position: "relative" }}>
       <MyCarousl />
       <MyTitleMessage />
       <MyNavbar />
-      {/* <Particles
-            className="particles particles-box"
-            params={particlesOptions}
-          /> */}
+      <Particles
+        className="particles particles-box"
+        params={particlesOptions}
+      />
 
       <div>
         <Parallax
@@ -68,6 +73,18 @@ const App = () => {
           </Slide>
         </Container>
       </div>
+
+      <div>
+        <Container className="container-box rounded">
+          <Fade duration={500}>
+            <hr />
+
+            <ContactForm />
+          </Fade>
+        </Container>
+      </div>
+      <hr />
+      <Footer />
     </div>
   );
 };
